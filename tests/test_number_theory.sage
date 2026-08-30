@@ -22,4 +22,11 @@ assert modular_inverse(3, 7) == 5
 assert (3 * modular_inverse(3, 7)) % 7 == 1
 
 
+
+# Test euler_function
+for n in range(1, 11):
+    print(n, compute_totient(n), euler_phi(n))
+
+
+    
 print("All tests passed!")

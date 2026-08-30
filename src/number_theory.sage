@@ -20,3 +20,13 @@ def modular_inverse(a, n):
         return None
 
     return x % n
+
+# Euler's Totient Function
+def compute_totient(n):
+    count = 0
+
+    for k in range(1, n + 1):
+        if gcd(k, n) == 1:
+            count += 1
+
+    return count
