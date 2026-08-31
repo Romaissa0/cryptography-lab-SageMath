@@ -27,6 +27,16 @@ assert (3 * modular_inverse(3, 7)) % 7 == 1
 for n in range(1, 11):
     print(n, compute_totient(n), euler_phi(n))
 
+# test euler and fermat theorem
+print(verify_euler_theorem(3, 10))
+print(verify_euler_theorem(2, 21))
+
+print(verify_fermat_theorem(3, 7))
+print(verify_fermat_theorem(7, 13))
+
+print(verify_euler_theorem(2, 10))
+print(verify_fermat_theorem(3, 10))
+print(verify_fermat_theorem(7, 7))
 
     
 print("All tests passed!")
