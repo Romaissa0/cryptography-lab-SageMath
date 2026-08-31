@@ -38,5 +38,10 @@ print(verify_euler_theorem(2, 10))
 print(verify_fermat_theorem(3, 10))
 print(verify_fermat_theorem(7, 7))
 
+
+#compute totient 2 ways
+compute_totient_fast(20)
+for n in [12, 15, 21, 77]:
+    print(n, compute_totient_fast(n))
     
 print("All tests passed!")

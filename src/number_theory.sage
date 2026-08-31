@@ -47,3 +47,11 @@ def verify_fermat_theorem(a, p):
         return False
 
     return power_mod(a, p - 1, p) == 1
+
+#totient formula
+def compute_totient_fast(n):
+    f = factor(n)
+    result = n
+    for p, exponent in f:
+        result =result*(1-1/p)
+    return result
