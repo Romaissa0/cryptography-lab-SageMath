@@ -59,3 +59,11 @@ def create_prime_field(p):
         return GF(p)
     else:
         raise ValueError("p must be prime")
+
+#create field extension
+
+def create_extension_field(p, n, f):
+    if is_prime(p) and f.degree() == n and f.is_irreducible():
+        return GF(p^n,name = 'a' ,modulus=f)
+    else:
+        raise ValueError("Invalid extension field parameters")
