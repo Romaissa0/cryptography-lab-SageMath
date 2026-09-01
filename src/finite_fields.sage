@@ -67,3 +67,9 @@ def create_extension_field(p, n, f):
         return GF(p^n,name = 'a' ,modulus=f)
     else:
         raise ValueError("Invalid extension field parameters")
+
+
+# Good vs Bad polynomial
+
+def is_valid_extension_polynomial(p, n, f):
+    return is_prime(p) and f.degree() == n and f.is_irreducible()
