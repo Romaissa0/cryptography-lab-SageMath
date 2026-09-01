@@ -43,3 +43,19 @@ print(x^4)
 print(x^5)
 print(x^6)
 print(x^7)
+
+# irreducibility
+R.<x> = PolynomialRing(GF(2))
+
+f = x^3 + x + 1
+
+print(f.is_irreducible())
+
+
+# creating prime field
+
+def create_prime_field(p):
+    if is_prime(p):
+        return GF(p)
+    else:
+        raise ValueError("p must be prime")
